@@ -1,0 +1,23 @@
+<h2>{{{htmlName}}} <a class="fa-link" href="{{pageHref}}" title="Link to this entry.">&#xf0c1;</a> {{{source}}} {{{npm}}}</h2>
+<div class="signature">{{signature}}</div>
+
+{{{html}}}
+
+{{#if params~}}
+<h3>Arguments</h3>
+<ol>
+{{#each params~}}
+<li><span class="param-name">{{name}}</span> <span class="param-type">({{type}})</span> {{{html desc}}}</li>
+{{/each}}
+</ol>
+{{/if~}}
+
+{{#with returns~}}
+<h3>Returns <span class="return-type">({{type}})</span></h3>
+<div class="returns"> {{{html desc}}}</div>
+{{/with~}}
+
+{{#if example~}}
+<h3>Example</h3>
+{{{html example}}}
+{{/if~}}

@@ -1,0 +1,28 @@
+<div id="page">
+
+<header>
+<span id="navicon">{{{html "_!navicon fw lg_"}}}</span>
+<div id="header">
+<a href="{{relPath}}/"><img src="{{relPath}}/images/logo.png"></a>
+<div id="headertext"><h1>lodash</h1> v{{option 'version'}}</div>
+</div>
+<div id="search">
+<form id="search-form" action="{{relPath}}/" method="GET">
+<input type="search" name="q" id="q" placeholder="Search..." autocomplete="off">
+<ul id="q-list" class="shadow"></ul>
+</form>
+</div>
+</header>
+
+<div id="main" onclick="">
+<div id="content" class="markdown-body">
+{{{renderPage}}}
+</div>
+</div>
+
+</div>
+
+<nav id="toc">
+<div id="tochead">{{{linkTo '/' 'Home'}}}</div>
+{{{pageTree 'category' 'Docs'}}}
+</nav>

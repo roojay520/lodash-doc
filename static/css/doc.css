@@ -1,0 +1,122 @@
+/*
+ * pub-theme-doc-II stylesheet
+ * (to be extracted into pub-theme-doc-II)
+ *
+ * copyright 2015 jurgen leschner (github/jldec) - MIT license
+ */
+
+body {
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; -webkit-text-size-adjust:100%; text-size-adjust:100%;
+  font-size:16px; line-height:1.6; font-weight:400; word-wrap:break-word;
+  color:#000; background-color:#fff; margin:0;
+}
+
+a { color:#358bff; text-decoration:none; }
+
+header { position:fixed; top:0; left:0; width:100%; height:38px; background-color:#000; color:#358bff; font-size:18px; }
+header a, header a:hover, header a:active, #navicon { color:#fff; text-decoration:none; cursor:pointer; }
+
+#navicon { position:absolute; left:-40px; top:0; width:40px; z-index:10; line-height:38px; text-align:center; }
+#navicon div, #navicon p { display:inline-block; margin:0; text-align:center; }
+
+#header, #headertext { display:inline-block; }
+#header img { height:38px; vertical-align:top; border-left:2px solid white; border-right:2px solid white; }
+#headertext h1 { display:inline-block; line-height:38px; font-weight:400; color:#fff; font-size:18px; margin:0; }
+
+#search { position:absolute; display:inline-block; z-index:10; top:5px; right:8px; }
+
+#q { padding:2px 8px; font-size:16px; color:#000; width:220px; border-radius:12px; border:1px solid #ccc; box-sizing:border-box; }
+
+#search-form > ul {
+  position:absolute; z-index:10; left:-10000px; width:220px; max-height:800px; background-color:#fff;
+  border:solid 1px #ccc; margin:0; padding:0; line-height:24px; overflow-y:auto; overflow-x:hidden; white-space:nowrap;
+  -moz-box-shadow: 4px 4px 3px #999; -webkit-box-shadow: 4px 4px 3px #999; box-shadow: 4px 4px 3px #999;
+}
+
+#search-form > ul.show { left:0; }
+#search-form .searchitem.selected { background-color:#efefef; }
+
+#search-form li a { color:#0069b5; display:block; padding-left:10px; font-size:16px; }
+#search-form li a:hover { background-color:#ddd; }
+
+#toc { position:fixed; z-index:20; top:38px; bottom:0; left:0; width:240px; border-right:1px solid #ddd; background-color:#efefef; overflow-y:auto; -webkit-overflow-scrolling:touch; }
+#toc::-webkit-scrollbar { width:0; }
+
+span.aliases { font-size:0.7em; color:#999; font-style:italic; }
+#content span.aliases:before { content:" (alias: "; }
+#content span.aliases:after { content:")"; }
+
+#toc span.folderPage { display:block; font-weight:600; color:#000; padding:4px 0 0 8px; border-top:1px solid #ddd; margin-top:10px }
+#toc ul { list-style:none; padding:0; margin:0; }
+
+#toc li.folder > span.folderPage:before {
+  display:inline-block; float:right; font:normal normal normal 18px FontAwesome;
+  line-height:22px; width:22px; text-align:center; content:"\f106"; color:#777;
+}
+
+#toc li.folder.collapsed > span.folderPage:before { content:"\f107" }
+#toc li.folder.collapsed > ul { display:none; }
+
+#toc a { display:inline-block; color:#555; min-width:10em; padding-left:16px; }
+#tochead a { display:block; margin-top:10px; }
+#toc a.open { background-color:#358bff; color:#fff; }
+
+#toc a:hover, #toc a:active,
+#toc li.folder > span.folderPage:hover,
+#toc li.folder > span.folderPage:active { background-color:#ccc; }
+
+pre { border-left:1px solid #ccc; padding-left:1em; word-wrap:normal; overflow:auto; }
+pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; font-size:14px; line-height:22px; }
+
+#main { margin:48px 0 0 240px; }
+#content { max-width:730px; margin:0 auto; padding:0 10px; }
+
+#content p, #content blockquote, #content ul, #content ol, #content dl, #content table, #content pre { margin-top:0; margin-bottom:16px; }
+#content a:hover, #content a:active { text-decoration:underline; }
+
+#content h1, #content h2 { margin:10px 0; color:#000; border-bottom:1px solid #358bff; font-weight:600; }
+#content h2 > a { float:right; padding-left:6px; color:#999; font-size:13px; font-weight:normal; line-height:28px; padding-top:10px; }
+
+#content a.fa-link { display:inline-block; font:normal normal normal 14px FontAwesome;
+  line-height:28px; height:28px; text-align:center; width:18px; color:#bbb;
+}
+#content a.fa-link:hover { text-decoration:none; }
+
+#content h2 > a:hover { color:#333; }
+#content h3 { font-size:1em; margin:1.3em 0 0.5em; }
+#content h4, #content h5 { margin-bottom:0.2em; margin-top:1em; }
+
+.quickref, .quickref-content { border-radius:3px; border:1px solid #ccc; box-sizing:border-box; padding:2px 4px; margin:2px; }
+.quickref { display:inline-block; cursor:pointer; }
+.quickref-content { display:none; }
+.quickref.show { background-color:#358bff; border:1px solid #358bff; color:#fff; }
+.quickref:hover { background-color:#333; border:1px solid #333; color:#fff; }
+.signature, .param-name, .alias { font-family:Consolas,'Courier New',monospace; font-weight:bold; }
+.signature { margin-bottom:1em; line-height:2; }
+.signature > a { color:#000; display:block; }
+.param-type, .return-type { font-style:italic; font-weight:normal; }
+
+
+@media only screen and (max-width:1000px) {
+  #main { margin:0; }
+  #page { position:absolute; width:100%; }
+  #page.showtoc { position:fixed; left:241px; }
+  header { position:relative; }
+  #navicon { left:0; }
+  #header { position:absolute; left:40px; }
+  #toc { left:-241px; top:0; }
+  #toc.show { left:0; }
+}
+
+@media only screen and (max-width:500px) {
+  #headertext { display:none; }
+}
+
+@media print {
+html, body { font-size:10px; color:#000; }
+a { color:#000; text-decoration:underline; }
+header, #toc, #credit, .pub-button, #content h2 > a { display:none; }
+#main { margin:5em; }
+#content { max-width:80em; margin:0; padding:0; }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "lodash-doc-src",
+  "version": "0.0.1",
+  "description": "pub-server source for lodash documentation",
+  "main": "pub-config.js",
+  "dependencies": {
+    "docdown": "^0.2.1",
+    "lodash": "^3.10.1",
+    "pub-pkg-prism": "^1.0.0",
+    "pub-server": "^1.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jldec/lodash-doc-src.git"
+  },
+  "scripts": {
+    "develop": "pub",
+    "generate": "pub -O",
+    "static": "pub -S out"
+  },
+  "author": "jurgen leschner",
+  "license": "MIT"
+}
