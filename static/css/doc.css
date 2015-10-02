@@ -29,7 +29,7 @@ header a, header a:hover, header a:active, #navicon { color:#fff; text-decoratio
 #q { padding:2px 8px; font-size:16px; color:#000; width:220px; border-radius:12px; border:1px solid #ccc; box-sizing:border-box; }
 
 #search-form > ul {
-  position:absolute; z-index:10; left:-10000px; width:220px; max-height:800px; background-color:#fff;
+  position:absolute; z-index:10; left:-10000px; width:220px; max-height:480px; background-color:#fff;
   border:solid 1px #ccc; margin:0; padding:0; line-height:24px; overflow-y:auto; overflow-x:hidden; white-space:nowrap;
   -moz-box-shadow: 4px 4px 3px #999; -webkit-box-shadow: 4px 4px 3px #999; box-shadow: 4px 4px 3px #999;
 }
