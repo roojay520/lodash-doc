@@ -17,7 +17,7 @@ a { color:#358bff; text-decoration:none; }
 header { position:fixed; top:0; left:0; width:100%; height:38px; background-color:#000; color:#358bff; font-size:18px; }
 header a, header a:hover, header a:active, #navicon { color:#fff; text-decoration:none; cursor:pointer; }
 
-#navicon { position:absolute; left:-40px; top:0; width:40px; z-index:10; line-height:38px; text-align:center; }
+#navicon { position:absolute; left:-38px; top:0; width:38px; z-index:10; line-height:38px; text-align:center; }
 #navicon div, #navicon p { display:inline-block; margin:0; text-align:center; }
 
 #header, #headertext { display:inline-block; }

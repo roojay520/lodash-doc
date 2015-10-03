@@ -14,9 +14,12 @@ var $toc = $('#toc');
 var toc = $toc.get(0);
 var $page = $('#page');
 var freshTocScrollState = true;
+var $searchInput = $('#q');
+var searchInput = $searchInput.get(0);
+var thisUrl = pubRef.relPath + pubRef.href;
 
 // identify folder and highlight current page in toc
-var $tocpagelink = $('#toc a[href="' + pubRef.relPath + pubRef.href + '"]').addClass('open');
+var $tocpagelink = $('#toc a[href="' + thisUrl + '"]').addClass('open');
 var $tocfolder = $tocpagelink.parent('li').parent('ul').parent('li');
 
 $('#navicon').click(function(evt) {
@@ -89,7 +92,6 @@ $('#toc a').each(function(){
 
 // search UI state
 var searchList = {
-  $field: $('#q'),
   $list: $('#q-list'),
   length: 0,
   hselect: false,
@@ -98,11 +100,35 @@ var searchList = {
 }
 
 // search UI events
-$('#q')
-  .keydown(searchListNav)
-  .keyup(search)
-  .blur(searchListHide)
+$searchInput
   .focus(searchListShow)
+  .keydown(searchListNav)
+  .keyup(search);
+
+$page.click(function(evt) {
+  if (evt.target !== searchInput) return searchListHide(evt);
+  return true;
+});
+
+$(window).keydown(function(evt) {
+  if (evt.metaKey || evt.altKey || evt.ctrlKey  || evt.target == searchInput) return true;
+  var k = evt.keyCode;
+console.log('keydown: ' + k)
+  if ((k >= 65 && k <= 90) || k === 189 || k === 190) { searchInput.focus(); } // a-z . _
+  if (k === 37) { jump(-1); } // left
+  if (k === 39) { jump(1); } // right
+  return true;
+})
+
+function jump(offset) {
+console.log('jump: ' + offset)
+  _.each(searchData, function(o, idx) {
+    if (o.href === thisUrl) {
+      var goto = searchData[idx + offset];
+      if (goto && goto.href) return navTo(goto.href);
+    }
+  })
+}
 
 // prevent blur(searchListHide) when clicking search list
 $('#q-list')
@@ -132,12 +158,13 @@ function searchListHide(evt, searching) {
     return true;
   }
   searchList.$list.removeClass('show');
-  return false; // necessary for chrome
+  return true; // allow other stuff to happen when you click outside
 }
 
-function searchListShow() {
+function searchListShow(evt) {
   if (searchList.length) {
     searchList.$list.addClass('show');
+    return false
   }
   return true;
 }
@@ -189,11 +216,12 @@ var renderSearchItem = _.template('<li class="searchitem"><a href="{{href}}" tit
 
 // search keyup events refresh search results
 function search(evt) {
-  var q = searchList.$field.val();
+  var q = $searchInput.val();
   if (q === searchList.q) return true;
-  if (!q.length) return searchListHide(evt, true);
   searchList.q = q;
-  var re = new RegExp(_.map(q.split(/\s/), _.escapeRegExp).join('.*'), "i");
+  words = _.compact(q.split(/\W/));
+  if (!words.length) return searchListHide(evt, true);
+  var re = new RegExp(_.map(words, _.escapeRegExp).join('.*'), "i");
   var results = _.filter(searchData, function(o) {
     return (o.text.search(re) >= 0 || o.href.search(re) >= 0);
   })
