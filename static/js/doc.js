@@ -30,12 +30,6 @@ $('#navicon').click(function(evt) {
   return false;
 });
 
-$('.quickref').click(function(evt) {
-  $(this).toggleClass("show");
-  $(this).next().toggle();
-  return false;
-});
-
 var $folders = $('li.folder > span.folderPage');
 
 var collapsed = localStorage.collapsed;
@@ -109,7 +103,6 @@ $('#q')
   .keyup(search)
   .blur(searchListHide)
   .focus(searchListShow)
-  .get(0).focus();
 
 // prevent blur(searchListHide) when clicking search list
 $('#q-list')

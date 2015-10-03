@@ -40,7 +40,10 @@ header a, header a:hover, header a:active, #navicon { color:#fff; text-decoratio
 #search-form li a { color:#0069b5; display:block; padding-left:10px; font-size:16px; }
 #search-form li a:hover { background-color:#ddd; }
 
-#toc { position:fixed; z-index:20; top:38px; bottom:0; left:0; width:240px; border-right:1px solid #ddd; background-color:#efefef; overflow-y:auto; -webkit-overflow-scrolling:touch; }
+#toc { position:fixed; z-index:20; top:38px; bottom:0; left:0; width:240px;
+  border-right:1px solid #ddd; background-color:#efefef;
+  overflow-y:auto; -webkit-overflow-scrolling:touch; }
+
 #toc::-webkit-scrollbar { width:0; }
 
 span.aliases { font-size:0.7em; color:#999; font-style:italic; }
@@ -49,6 +52,7 @@ span.aliases { font-size:0.7em; color:#999; font-style:italic; }
 
 #toc span.folderPage { display:block; font-weight:600; color:#000; padding:4px 0 0 8px; border-top:1px solid #ddd; margin-top:10px }
 #toc ul { list-style:none; padding:0; margin:0; }
+#toc > ul { border-bottom:1px solid #ddd; margin-bottom:10em; padding-bottom:10px; }
 
 #toc li.folder > span.folderPage:before {
   display:inline-block; float:right; font:normal normal normal 18px FontAwesome;
@@ -70,7 +74,7 @@ pre { border-left:1px solid #ccc; padding-left:1em; word-wrap:normal; overflow:a
 pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; font-size:14px; line-height:22px; }
 
 #main { margin:48px 0 0 240px; }
-#content { max-width:730px; margin:0 auto; padding:0 10px; }
+#content { max-width:730px; margin:0 auto; padding:0 10px 10em 10px; }
 
 #content p, #content blockquote, #content ul, #content ol, #content dl, #content table, #content pre { margin-top:0; margin-bottom:16px; }
 #content a:hover, #content a:active { text-decoration:underline; }
@@ -87,11 +91,6 @@ pre, code { font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospac
 #content h3 { font-size:1em; margin:1.3em 0 0.5em; }
 #content h4, #content h5 { margin-bottom:0.2em; margin-top:1em; }
 
-.quickref, .quickref-content { border-radius:3px; border:1px solid #ccc; box-sizing:border-box; padding:2px 4px; margin:2px; }
-.quickref { display:inline-block; cursor:pointer; }
-.quickref-content { display:none; }
-.quickref.show { background-color:#358bff; border:1px solid #358bff; color:#fff; }
-.quickref:hover { background-color:#333; border:1px solid #333; color:#fff; }
 .signature, .param-name, .alias { font-family:Consolas,'Courier New',monospace; font-weight:bold; }
 .signature { margin-bottom:1em; line-height:2; }
 .signature > a { color:#000; display:block; }

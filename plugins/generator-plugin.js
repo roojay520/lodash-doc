@@ -142,10 +142,4 @@ module.exports = function(generator) {
            frame.fn).join('');
   });
 
-  hb.registerHelper('eachEntrySortByName', function(frame) {
-    var entries = generator.templatePages$['entry'];
-    return _.map(_.sortBy(entries, function(page) { return page.name.toLowerCase(); }),
-           frame.fn).join('');
-  });
-
 }
