@@ -113,7 +113,6 @@ $page.click(function(evt) {
 $(window).keydown(function(evt) {
   if (evt.metaKey || evt.altKey || evt.ctrlKey  || evt.target == searchInput) return true;
   var k = evt.keyCode;
-console.log('keydown: ' + k)
   if ((k >= 65 && k <= 90) || k === 189 || k === 190) { searchInput.focus(); } // a-z . _
   if (k === 37) { jump(-1); } // left
   if (k === 39) { jump(1); } // right
@@ -121,7 +120,6 @@ console.log('keydown: ' + k)
 })
 
 function jump(offset) {
-console.log('jump: ' + offset)
   _.each(searchData, function(o, idx) {
     if (o.href === thisUrl) {
       var goto = searchData[idx + offset];
