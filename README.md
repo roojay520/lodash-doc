@@ -1,6 +1,6 @@
 # lodash doc
 
-http://jldec.github.io/lodash-doc/
+https://jldec.github.io/lodash-doc-2
 
 This is a trial doc website for lodash, generated from markdown using [pub-server](http://jldec.github.io/pub-doc)
 
@@ -10,7 +10,7 @@ To edit the site locally, clone this repo, then
 npm install
 ```
 
-`pub-config` points to the source in '../../lodash/lodash/lodash.src.js'. To preview at http://localhost:3001/ while you edit
+`pub-config` points to the source in '../../lodash/lodash/lodash.js'. To preview at http://localhost:3001/ while you edit
 
 ```sh
 npm run develop
