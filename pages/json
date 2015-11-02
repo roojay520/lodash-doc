@@ -1,0 +1,4 @@
+---- /pages.json ----
+nocrawl:1
+nolayout:1
+template: pages.json

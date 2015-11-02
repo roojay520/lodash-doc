@@ -1,7 +1,7 @@
 /*
  * lodash-doc pub-generator plugin
  *
- * mostly copied from https://github.com/jdalton/docdown
+ * parts copied from https://github.com/jdalton/docdown
  * copyright 2011-2015 John-David Dalton <http://allyoucanleet.com/>
 */
 
@@ -15,6 +15,7 @@ module.exports = function(generator) {
   var push = Array.prototype.push;
   var specialCategories = ['Methods', 'Properties'];
 
+  // plugin parser
   generator.parseFilesJsDOC = parseFilesJsDOC;
 
   //--//--//--//--//--//--//--//--//--//--//--//--//--//
@@ -28,7 +29,7 @@ module.exports = function(generator) {
       file.source = source;
 
       // what follows is mostly from docdown/lib/generator.js
-      // use file.text as 'source' to getEntries
+      // using file.text as 'source' to getEntries
 
       // Add entries and aliases to the API list.
       _.each(Entry.getEntries(file.text), function(entry) {
@@ -66,7 +67,7 @@ module.exports = function(generator) {
           category:   entry.getCategory(),
           name:       separator.slice(1) + name,
           htmlName:   _.escape(separator.slice(1) + name),
-          signature:  member + separator + entry.getCall(),
+          title:      member + separator + entry.getCall(),
           lineNumber: entry.getLineNumber(),
           template:   'entry' };
 
@@ -138,8 +139,39 @@ module.exports = function(generator) {
   });
 
   hb.registerHelper('eachSinglePage', function(frame) {
-    return _.map(_.reject(generator.contentPages, function(page) { return page.multipage; }),
-           frame.fn).join('');
+    return _.map(singlePages(), frame.fn).join('');
   });
+
+  hb.registerHelper('eachSinglePageArray', function(frame) {
+    return '[' + _.map(singlePages(), frame.fn).join(',') + ']';
+  });
+
+  hb.registerHelper('serializePages', function(frame) {
+    return JSON.stringify(_.map(singlePages(), bare));
+  });
+
+  hb.registerHelper('jsonBlock', function(frame) {
+    return JSON.stringify(frame.fn(this));
+  });
+
+  // unformatted object inspector - down to 2 levels
+  hb.registerHelper('inspect', function(frame) {
+    return require('util').inspect(bare(this), {levels:2});
+  });
+
+  // return bare page object (no refs to files etc.)
+  function bare(page) {
+    var o = _.omit(page, ['_file', '_children', '_parent', '_prev', '_next']);
+    try { JSON.stringify(o); } catch(err) {
+      console.log('ERROR', page._href, _.keys(page));
+      return '';
+    }
+    return o;
+  }
+
+  // return array of single pages
+  function singlePages() {
+    return _.reject(generator.contentPages, function(page) { return page.multipage; });
+  }
 
 }

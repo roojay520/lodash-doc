@@ -1,11 +1,13 @@
 var opts = module.exports = {
 
   appUrl: 'http://jldec.github.io/lodash-doc',
-  version: '3.10.1',
+  version: '4.0.0',
 
   noRobots: true,            // please don't crawl me (yet)
   linkNewWindow: true,
   folderPages: true,
+  editor: false,
+  throttleReload: '1s',
 
   pkgs: [
     'pub-pkg-prism',
@@ -15,8 +17,8 @@ var opts = module.exports = {
 
   sources: [
     { path:'./pages', writable:true },
-    { path: '../../lodash/lodash/lodash.src.js', format: 'JsDOC' },
-    './templates'
+    { path:'../../lodash/lodash/lodash.js', format: 'JsDOC' },
+    { path:'./templates', compile:'handlebars' }
   ],
 
   staticPaths: [
@@ -29,11 +31,11 @@ var opts = module.exports = {
   generatorPlugins: './plugins/generator-plugin.js',
 
   injectCss: ['/css/doc.css'],
-  injectJs: ['/js/lodash.min.js', '/js/doc.js'],
+  injectJs: ['/js/lodash.min.js', '/js/doc.js' ],
 
   outputs: {
     path: './out',
     relPaths: true
-  },
+  }
 
 };

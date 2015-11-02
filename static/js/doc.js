@@ -4,88 +4,62 @@
 //
 // copyright 2015 jurgen leschner (github/jldec) - MIT license
 
-_.templateSettings.interpolate = /\{\-\{(.+?)\}\-\}/g;
-_.templateSettings.escape = /\{\{(.+?)\}\}/g;
-_.templateSettings.evaluate = /\|(.+?)\|/g;
-
+// initialize on load
 $(function() {
-
-var $toc = $('#toc');
-var toc = $toc.get(0);
-var $page = $('#page');
-var freshTocScrollState = true;
-var $searchInput = $('#q');
-var searchInput = $searchInput.get(0);
-var thisUrl = pubRef.relPath + pubRef.href;
-
-// identify folder and highlight current page in toc
-var $tocpagelink = $('#toc a[href="' + thisUrl + '"]').addClass('open');
-var $tocfolder = $tocpagelink.parent('li').parent('ul').parent('li');
-
-$('#navicon').click(function(evt) {
-  $toc.toggleClass('show');
-  $page.toggleClass('showtoc');
-  // try to restore scroll position in toc the first time it is shown
-  if (freshTocScrollState && localStorage.tocpos && $toc.hasClass('show')) {
-    $toc.scrollTop(localStorage.tocpos);
-    freshTocScrollState = false;
-  }
-  return false;
+  initPage();
 });
 
-var $folders = $('li.folder > span.folderPage');
-
-var collapsed = localStorage.collapsed;
-if (collapsed) { try { collapsed = JSON.parse(collapsed); } catch(err){} }
-
-// initialize with all except first folders collapsed
-if (typeof collapsed != 'object') {
-  collapsed = {};
-  $folders.not($tocfolder).each(function(i) {
-    if (i == 0) return; // skip
-    var el = this.parentNode;
-    collapsed[el.id] = true;
-    $(el).addClass('collapsed');
-  });
+// initialize on generator layout / reload
+window.onGenerator = function(generator) {
+  generator.on('update-view', function(path, query, hash, window, $el) {
+    if ($el.attr('data-render-html')) return;
+    initPage(path);
+  })
 }
-// use saved state
-else {
-  for (var id in collapsed) {
-    if (collapsed[id]) { $('#' + id).not($tocfolder).addClass('collapsed'); }
-  };
-}
+
+function initPage(path) {
+
+var $html = $('html');
+var $toc = $('#toc');
+var $toclist = $('#toclist');
+var $searchInput = $('#q');
+var $navIcon = $('#navicon');
+var $toggleAll = $('#toggleall');
+
+var html = $html.get(0);
+var height = html.clientHeight;
+var width = html.clientWidth;
+
+var toc = $toc.get(0);
+var toclist = $toclist.get(0);
+var freshTocScrollState = true;
+var searchInput = $searchInput.get(0);
+var thisUrl = path || (pubRef.relPath + pubRef.href);
+
+// highlight current page in toc
+var $tocpagelink = $('#toclist a[href="' + thisUrl + '"]').addClass('open');
 
 // try to restore previous toc scroll position
 if (localStorage.tocpos) {
-  $toc.scrollTop(localStorage.tocpos);
+  $toclist.scrollTop(localStorage.tocpos);
 }
-else {
-  // scroll toc to show current page
-  var toclinktop = ($tocpagelink.length && $tocpagelink.offset().top) || 0;
-  if (toclinktop > (toc.offsetTop + toc.clientHeight)) {
-    $toc.scrollTop(toclinktop - toc.clientHeight);
-  }
+
+// if necessary scroll toc to show current page
+var toclinktop = ($tocpagelink.length && $tocpagelink.offset().top) || 0;
+if (toclinktop > (toclist.offsetTop + toclist.clientHeight) || // below
+    toclinktop < toclist.offsetTop) { // above
+  $toclist.scrollTop($tocpagelink.get(0).offsetTop);
 }
 
 // always save state before navigating
 var onIOS = /iPad|iPhone/i.test(navigator.userAgent);
 $(window).on(onIOS ? "pagehide" : "beforeunload", function() {
-  localStorage.collapsed = JSON.stringify(collapsed);
-  localStorage.tocpos = $toc.scrollTop();
-});
-
-$folders.click(function(evt) {
-  var el = this.parentNode;
-  var id = el.id;
-  var $el = $(el);
-  $el.toggleClass('collapsed');
-  collapsed[id] = $el.hasClass('collapsed');
-  return false;
+  localStorage.tocpos = $toclist.scrollTop();
 });
 
 // extract search data from page-tree
 var searchData = []
-$('#toc a').each(function(){
+$('#toclist a').each(function(){
   var a = $(this);
   searchData.push({ href:a.attr('href'), text:a.text(), htmlText:this.innerHTML, title:a.attr('title') });
 });
@@ -105,15 +79,10 @@ $searchInput
   .keydown(searchListNav)
   .keyup(search);
 
-$page.click(function(evt) {
-  if (evt.target !== searchInput) return searchListHide(evt);
-  return true;
-});
-
 $(window).keydown(function(evt) {
   if (evt.metaKey || evt.altKey || evt.ctrlKey  || evt.target == searchInput) return true;
   var k = evt.keyCode;
-  if ((k >= 65 && k <= 90) || k === 189 || k === 190) { searchInput.focus(); } // a-z . _
+  if ((k >= 65 && k <= 90) || k === 189 || k === 190) { searchInput.focus(); $toc.addClass('show'); } // a-z . _
   if (k === 37) { jump(-1); } // left
   if (k === 39) { jump(1); } // right
   return true;
@@ -210,6 +179,8 @@ function moveSelection(selector, direction, $list, wraparound) {
 }
 
 // template external to search() to avoid recompiles
+_.templateSettings.interpolate = /\{\-\{(.+?)\}\-\}/g;
+_.templateSettings.escape = /\{\{(.+?)\}\}/g;
 var renderSearchItem = _.template('<li class="searchitem"><a href="{{href}}" title="{{title}}">{-{htmlText}-}</a></li>');
 
 // search keyup events refresh search results
@@ -248,4 +219,4 @@ function navTo(href) {
   window.location.href = href;
 }
 
-}); // $(function() {
+} // initPage()
