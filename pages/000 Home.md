@@ -1,7 +1,7 @@
 ---- / ----
 name: JavaScript utility library - Documentation Home
 
-# lodash
+## lodash
 A JavaScript utility library delivering consistency, [modularity](https://www.npmjs.com/browse/keyword/lodash-modularized), performance, & [extras](#features).
 
 <iframe style="width:105px;height:25px" allowtransparency="" frameborder="0" scrolling="no" src="./github-btn.html?user=lodash&amp;repo=lodash&amp;count=true&amp;type=watch"></iframe>

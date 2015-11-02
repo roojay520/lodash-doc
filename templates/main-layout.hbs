@@ -1,6 +1,6 @@
-<div id="navicon" onclick="">{{{faIcon "align-justify" "2x"}}}<nav id="toc" onclick="">
+<nav id="nav" onclick="">{{{faIcon "align-justify" "2x"}}}
 
-<header><a href="{{relPath}}/" title="Home"><img src="{{relPath}}/images/logo.png">lodash v{{option 'version'}}</a></header>
+<header><a href="{{relPath}}/" title="lodash"><img src="{{relPath}}/images/logo.png" alt="lodash">v{{option 'version'}}</a></header>
 
 <div id="search">
 <form id="search-form" action="{{relPath}}/" method="GET">
@@ -9,12 +9,12 @@
 </form>
 </div>
 
-<div id="toclist">
+<div id="toc">
 <div id="tochead">{{{linkTo '/' 'Home'}}}</div>
 {{{pageTree 'category' ''}}}
 </div>
 
-</nav></div>
+</nav>
 
 <div id="main" onclick="">
 <div id="content" class="markdown-body">

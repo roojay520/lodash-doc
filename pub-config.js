@@ -25,7 +25,8 @@ var opts = module.exports = {
     './static',
     './CNAME',
     '.gitignore',
-    '.nojekyll'
+    '.nojekyll',
+    './README.md'
   ],
 
   generatorPlugins: './plugins/generator-plugin.js',
