@@ -15,7 +15,7 @@
   },
   "scripts": {
     "develop": "pub",
-    "generate": "pub -O",
+    "generate": "pub -O -E",
     "static": "pub -S out"
   },
   "author": "jurgen leschner",
