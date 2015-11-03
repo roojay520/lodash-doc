@@ -31,8 +31,10 @@ var opts = module.exports = {
 
   generatorPlugins: './plugins/generator-plugin.js',
 
+  browserScripts: { path:'./doc.js', route:'/js', inject:true },
+
   injectCss: ['/css/doc.css'],
-  injectJs: ['/js/lodash.min.js', '/js/doc.js' ],
+  injectJs: ['/js/lodash.min.js'],
 
   outputs: {
     path: './out',
