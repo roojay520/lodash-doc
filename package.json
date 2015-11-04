@@ -4,7 +4,7 @@
   "description": "pub-server source for lodash documentation",
   "main": "pub-config.js",
   "dependencies": {
-    "docdown": "^0.2.1",
+    "docdown": "^0.3.0",
     "lodash": "^3.10.1",
     "page": "^1.6.4",
     "pub-server": "^1.9.14"

@@ -26,7 +26,7 @@ var onIOS = /iPad|iPhone/i.test(navigator.userAgent);
 
 // prefix for site if not running at server root
 var staticRoot = location.pathname.slice(0,location.pathname.length - pubRef.href.length);
-if (staticRoot) { console.log('static Root: ' + staticRoot); }
+// if (staticRoot) { console.log('static Root: ' + staticRoot); }
 
 // initialize searchData and setup keyboard and mouse search/nav event handlers
 initSearchNav();
@@ -34,9 +34,8 @@ initSearchNav();
 // call once on startup and again on each pager event
 navPath(pubRef.href);
 
-// TODO: should be browser dependent (requires history.pushState)
 var pager = null;
-initPager();
+if (history && history.pushState) { initPager(); }
 
 return;
 
@@ -56,7 +55,7 @@ function navPath(path) {
 
   if (currentPage) {
     // highlight current page in toc
-    currentPage.$a.addClass('open');
+    currentPage.$a.addClass('open').get(0).focus();
 
     // if necessary scroll toc to show current page
     var toclinktop = currentPage.$a.offset().top;
@@ -109,18 +108,24 @@ function initPager() {
         $content.html(page.html);
         navPath(path) // fix nav UI state
       }
-      console.log('pager: %s %s', path, page ? 'ok' : '-');
+      // console.log('pager: %s %s', path, page ? 'ok' : '-');
     });
 
     // start pager
     pager( {dispatch:false} );
-    console.log('pager ready')
+    // console.log('pager ready')
 
   });
 }
 
 // nav/search event handlers initialized only once
 function initSearchNav() {
+
+  // per @jdalton request - messy interaction with default small on screens
+  // var $navIcon = $('#nav > span.fa');
+  // $navIcon.click(function() {
+  //   $nav.toggleClass('show');
+  // })
 
   // try to restore previous toc scroll position
   if (localStorage.tocpos) {
@@ -276,6 +281,7 @@ function initSearchNav() {
   function searchListSelect(evt) {
     var href = $(evt && evt.target).attr('href') || // click on link
                $(evt && evt.target && evt.target.parentElement).attr('href') || // click on detail next to link
+               $('.searchitem.selected a').attr('href') || // enter key with selection
                $('.searchitem a').first().attr('href'); // enter key no selection
     if (!href) return true;
     navTo(href);
