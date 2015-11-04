@@ -2,7 +2,7 @@ var opts = module.exports = {
 
   appUrl: 'https://jldec.github.io/lodash-doc-2',
   github: 'https://github.com/jldec/lodash-doc-src',
-  version: '4.0.0',
+  version: '4.0.0-pre',
 
   noRobots: true,            // please don't crawl me (yet)
   linkNewWindow: true,
@@ -23,6 +23,7 @@ var opts = module.exports = {
   ],
 
   staticPaths: [
+    { path:'../../lodash/lodash/lodash.js', route:'/js', inject:true },
     './static',
     './CNAME',
     '.gitignore',
@@ -35,7 +36,6 @@ var opts = module.exports = {
   browserScripts: { path:'./doc.js', route:'/js', inject:true },
 
   injectCss: ['/css/doc.css'],
-  injectJs: ['/js/lodash.min.js'],
 
   outputs: {
     path: './out',

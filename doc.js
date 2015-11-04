@@ -92,8 +92,8 @@ function initPager() {
   .done(function(data) {
 
     pages = data;
-    page$ = _.indexBy(data, 'href');
-    page$['/all'] = { href:'/all', html:_.pluck(pages, 'html').join('\n') }; // all-in-one page
+    page$ = _.keyBy(data, 'href');
+    page$['/all'] = { href:'/all', html:_.map(pages, 'html').join('\n') }; // all-in-one page
 
     pager('*', function(ctx) {
       var path = ctx.path;
@@ -150,7 +150,7 @@ function initSearchNav() {
     searchData.push(o);
     lastObj = o;
   });
-  searchData$ = _.indexBy(searchData, 'href');
+  searchData$ = _.keyBy(searchData, 'href');
 
   // search UI state
   var searchList = {
