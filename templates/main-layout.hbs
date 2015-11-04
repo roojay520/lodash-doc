@@ -1,6 +1,9 @@
 <nav id="nav" onclick="">{{{faIcon "align-justify" "2x"}}}
 
-<header><a href="{{relPath}}/" title="lodash"><img src="{{relPath}}/images/logo.png" alt="lodash">v{{option 'version'}}</a></header>
+<header>
+<a class="version" href="{{relPath}}/" title="lodash"><img src="{{relPath}}/images/logo.png" alt="lodash">v{{option 'version'}}</a>
+<a class="build" href="{{option 'github'}}" target="_blank">Generated {{timestamp 'mmm d HH:MM:ss Z'}}</a>
+</header>
 
 <div id="search">
 <form id="search-form" action="{{relPath}}/" method="GET">

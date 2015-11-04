@@ -9,6 +9,7 @@ module.exports = function(generator) {
   var opts = generator.opts;
   var log = opts.log;
   var hb = generator.handlebars;
+  var u = generator.util;
 
   var _ = require('lodash');
   var Entry = require('docdown/lib/entry.js');
@@ -157,6 +158,10 @@ module.exports = function(generator) {
   // unformatted object inspector - down to 2 levels
   hb.registerHelper('inspect', function(frame) {
     return require('util').inspect(bare(this), {levels:2});
+  });
+
+  hb.registerHelper('timestamp', function(fmt) {
+    return u.date().format(hb.hbp(fmt));
   });
 
   // return bare page object (no refs to files etc.)

@@ -1,6 +1,7 @@
 var opts = module.exports = {
 
-  appUrl: 'http://jldec.github.io/lodash-doc',
+  appUrl: 'https://jldec.github.io/lodash-doc-2',
+  github: 'https://github.com/jldec/lodash-doc-src',
   version: '4.0.0',
 
   noRobots: true,            // please don't crawl me (yet)
