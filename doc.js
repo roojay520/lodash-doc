@@ -63,6 +63,9 @@ function navPath(path) {
         toclinktop < toc.offsetTop) { // above
       $toc.scrollTop(currentPage.$a.get(0).offsetTop);
     }
+
+    // close nav if toggled on
+    $nav.removeClass('show');
   }
   else {
     console.log("navPath can't find %s in toc", path);
@@ -72,7 +75,10 @@ function navPath(path) {
 // pager-aware nav handler
 function navTo(href) {
   if (!href) return;
-  if (pager) return pager.show(staticRoot + href);
+  if (pager) {
+    pager.show(staticRoot + href);
+    return;
+  }
   window.location.href = pubRef.relPath + href;
 }
 
@@ -135,6 +141,11 @@ function initSearchNav() {
   // always save state before navigating
   $(window).on(onIOS ? "pagehide" : "beforeunload", function() {
     localStorage.tocpos = $toc.scrollTop();
+  });
+
+  // nav show/hide
+  $('#nav > span.fa').click(function(evt) {
+    $nav.toggleClass('show');
   });
 
   // extract search data from page-tree
