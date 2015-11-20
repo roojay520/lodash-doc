@@ -112,7 +112,8 @@ function initPager() {
       var page = page$[path];
       if (page) {
         $content.html(page.html);
-        navPath(path) // fix nav UI state
+        navPath(path); // fix nav UI state
+        $('html,body').animate({ scrollTop: 0}, 200);
       }
       // console.log('pager: %s %s', path, page ? 'ok' : '-');
     });
