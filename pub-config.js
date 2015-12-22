@@ -1,7 +1,7 @@
 var opts = module.exports = {
 
-  appUrl: 'https://jldec.github.io/lodash-doc-2',
-  github: 'https://github.com/jldec/lodash-doc-src',
+  appUrl: 'http://think2011.net/lodash-zh',
+  github: 'https://github.com/think2011/lodash-zh',
   version: '4.0.0-pre',
 
   noRobots: true,            // please don't crawl me (yet)
@@ -18,12 +18,12 @@ var opts = module.exports = {
 
   sources: [
     { path:'./pages', writable:true },
-    { path:'../../lodash/lodash/lodash.js', format: 'JsDOC' },
+    { path:'./lodash/lodash.js', format: 'JsDOC' },
     { path:'./templates', compile:'handlebars' }
   ],
 
   staticPaths: [
-    { path:'../../lodash/lodash/lodash.js', route:'/js', inject:true },
+    { path:'./lodash/lodash.js', route:'/js', inject:true },
     './static',
     './CNAME',
     '.gitignore',
@@ -38,7 +38,7 @@ var opts = module.exports = {
   injectCss: ['/css/doc.css'],
 
   outputs: {
-    path: './out',
+    path: './lodash-zh',
     relPaths: true
   }
 

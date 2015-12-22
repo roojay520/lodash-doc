@@ -1,3 +1,6 @@
 [submodule "lodash"]
 	path = lodash
 	url = git@github.com:think2011/lodash.git
+[submodule "lodash-zh"]
+	path = lodash-zh
+	url = git@github.com:think2011/lodash-zh.git
