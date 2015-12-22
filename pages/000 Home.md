@@ -1,8 +1,8 @@
 ---- / ----
-name: JavaScript utility library - Documentation Home
+name: JavaScript 工具库 - 首页
 
 ## lodash
-A JavaScript utility library delivering consistency, [modularity](https://www.npmjs.com/browse/keyword/lodash-modularized), performance, & [extras](#features).
+一个跨浏览器的实用工具库, [模块化](https://www.npmjs.com/browse/keyword/lodash-modularized), 高性能, & [可扩展](#features).
 
 <iframe style="width:105px;height:25px" allowtransparency="" frameborder="0" scrolling="no" src="./github-btn.html?user=lodash&amp;repo=lodash&amp;count=true&amp;type=watch"></iframe>
 <iframe style="width:105px; height:25px" allowtransparency="" frameborder="0" scrolling="no" src="./github-btn.html?user=lodash&amp;repo=lodash&amp;count=true&amp;type=fork"></iframe>
@@ -74,3 +74,6 @@ _.map([1, 2, 3], function(n) { return n * 3; });
 *   [_.includes](/includes), [_.toArray](/toArray), & [more](/docs "_.at, _.countBy, _.every, _.filter, _.find, _.findLast, _.findWhere, _.forEach, _.forEachRight, _.groupBy, _.indexBy, _.invoke, _.map, _.max, _.min, _.partition, _.pluck, _.reduce, _.reduceRight, _.reject, _.shuffle, _.size, _.some, _.sortBy, _.sortByAll, _.sortByOrder, _.sum, _.where") accept strings
 *   [_#commit](/prototype-commit) & [_#plant](/prototype-plant) for working with chain sequences
 *   [_#thru](/thru) to pass values thru a chain sequence
+
+## 关于翻译
+该文档由 [think2011](https://github.com/think2011/) 翻译，保持与官方同步，如果您有任何建议，或者意见，[欢迎在此讨论 ;-)](https://github.com/think2011/lodash-zh/issues)。

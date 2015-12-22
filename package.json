@@ -16,7 +16,8 @@
   "scripts": {
     "develop": "pub",
     "generate": "pub -O -E",
-    "static": "pub -S out"
+    "static": "pub -S out",
+    "publish": "npm run generate && cd lodash-zh && git add . && git commit -m \"publish\" && git push"
   },
   "author": "jurgen leschner",
   "license": "MIT"
