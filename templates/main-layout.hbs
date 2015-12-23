@@ -1,25 +1,25 @@
 <nav id="nav" onclick=""><span class="fa fa-2x"></span>
 
-<header>
-<a href="{{relPath}}/" title="lodash"><img src="{{relPath}}/images/logo.png" alt="lodash">v{{option 'version'}}</a>
-</header>
+    <header>
+        <a href="{{relPath}}/" title="lodash"><img src="{{relPath}}/images/logo.png" alt="lodash">v{{option 'version'}}</a>
+    </header>
 
-<div id="search">
-<form id="search-form" action="{{relPath}}/" method="GET">
-<input type="search" name="q" id="q" placeholder="Type to search..." autocomplete="off">
-<ul id="q-list" class="shadow"></ul>
-</form>
-</div>
+    <div id="search">
+        <form id="search-form" action="{{relPath}}/" method="GET">
+            <input type="search" name="q" id="q" placeholder="搜索内容.." autocomplete="off">
+            <ul id="q-list" class="shadow"></ul>
+        </form>
+    </div>
 
-<div id="toc">
-<div id="tochead">{{{linkTo '/' 'Home'}}}</div>
-{{{pageTree 'category' ''}}}
-</div>
+    <div id="toc">
+        <div id="tochead">{{{linkTo '/' '主页'}}}</div>
+        {{{pageTree 'category' ''}}}
+    </div>
 
 </nav>
 
 <div id="main" onclick="">
-<div id="content" class="markdown-body">
-{{{renderPage}}}
-</div>
+    <div id="content" class="markdown-body">
+        {{{renderPage}}}
+    </div>
 </div>

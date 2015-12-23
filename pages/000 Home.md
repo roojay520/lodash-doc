@@ -17,21 +17,21 @@ _.map([1, 2, 3], function(n) { return n * 3; });
 // → [3, 6, 9]
 ```
 
-## Features
+## 特点
 
-*   ~100% [code coverage](https://coveralls.io/github/lodash)
-*   Follows [semantic versioning](http://semver.org/) for releases
-*   [Lazily evaluated](http://filimanjaro.com/blog/2014/introducing-lazy-evaluation/) chaining
-*   [_(…)](/_) supports implicit chaining
-*   [_.ary](/ary) & [_.rearg](/rearg) to change function argument limits & order
-*   [_.at](/at) for cherry-picking collection values
-*   [_.attempt](/attempt) to execute functions which may error without a try-catch
-*   [_.before](/before) to complement [_.after](/after)
-*   [_.bindKey](/bindKey) for binding [_“lazy”_](http://michaux.ca/articles/lazy-function-definition-pattern) defined methods
-*   [_.chunk](/chunk) for splitting an array into chunks of a given size
-*   [_.clone](/clone) supports shallow cloning of `Date` & `RegExp` objects
-*   [_.cloneDeep](/cloneDeep) for deep cloning arrays & objects
-*   [_.curry](/curry) & [_.curryRight](/curryRight) for creating [curried](http://hughfdjackson.com/javascript/why-curry-helps/) functions
+*   ~100% [代码覆盖率](https://coveralls.io/github/lodash)
+*   遵循 [语义化版本控制规范](http://semver.org/)
+*   [延迟计算链](http://filimanjaro.com/blog/2014/introducing-lazy-evaluation/)
+*   [_(…)](/_) 支持隐式链
+*   [_.ary](/ary) & [_.rearg](/rearg) 能改变函数的实参个数和顺序
+*   [_.at](/at) 可以更方便的获取数组或对象的值
+*   [_.attempt](/attempt) 无需 try-catch 来处理可能会出错的执行函数
+*   [_.before](/before) 与 [_.after](/after) 
+*   [_.bindKey](/bindKey) 用于实现 [_“懒传参”_](http://michaux.ca/articles/lazy-function-definition-pattern) 
+*   [_.chunk](/chunk) 按给定个数来拆分数组
+*   [_.clone](/clone) 支持对 `Date` & `RegExp` 对象的浅拷贝
+*   [_.cloneDeep](/cloneDeep) 深拷贝数组或对象
+*   [_.curry](/curry) & [_.curryRight](/curryRight) 用于创建 [柯里化](http://hughfdjackson.com/javascript/why-curry-helps/) 函数
 *   [_.debounce](/debounce) & [_.throttle](/throttle) are cancelable & accept options for more control
 *   [_.defaultsDeep](/defaultsDeep) for recursively assigning default properties
 *   [_.fill](/fill) to fill arrays with values
@@ -76,4 +76,5 @@ _.map([1, 2, 3], function(n) { return n * 3; });
 *   [_#thru](/thru) to pass values thru a chain sequence
 
 ## 关于翻译
-该文档由 [think2011](https://github.com/think2011/) 翻译，保持与官方同步，如果您有任何建议，或者意见，[欢迎在此讨论 ;-)](https://github.com/think2011/lodash-zh/issues)。
+* 该文档由 [think2011](https://github.com/think2011/) 翻译，保持与官方同步，翻译质量可能没法特别好，但会保证尽可能反复细心。
+* 如果您有任何建议，或者意见，[欢迎在此讨论，及时更正 ;-)](https://github.com/think2011/lodash-zh/issues)。
