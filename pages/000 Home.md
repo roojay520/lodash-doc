@@ -2,7 +2,7 @@
 name: JavaScript 工具库 - 首页
 
 ## lodash
-一个跨浏览器的实用工具库, [模块化](https://www.npmjs.com/browse/keyword/lodash-modularized), 高性能, & [可扩展](#features).
+一个 JavaScript 的实用工具库, 表现一致性, [模块化](https://www.npmjs.com/browse/keyword/lodash-modularized), 高性能, 以及 [可扩展](#features)
 
 <iframe style="width:105px;height:25px" allowtransparency="" frameborder="0" scrolling="no" src="./github-btn.html?user=lodash&amp;repo=lodash&amp;count=true&amp;type=watch"></iframe>
 <iframe style="width:105px; height:25px" allowtransparency="" frameborder="0" scrolling="no" src="./github-btn.html?user=lodash&amp;repo=lodash&amp;count=true&amp;type=fork"></iframe>
@@ -23,11 +23,11 @@ _.map([1, 2, 3], function(n) { return n * 3; });
 *   遵循 [语义化版本控制规范](http://semver.org/)
 *   [延迟计算链](http://filimanjaro.com/blog/2014/introducing-lazy-evaluation/)
 *   [_(…)](/_) 支持隐式链
-*   [_.ary](/ary) & [_.rearg](/rearg) 能改变函数的实参个数和顺序
-*   [_.at](/at) 可以更方便的获取数组或对象的值
+*   [_.ary](/ary) & [_.rearg](/rearg) 改变函数的实参个数和顺序
+*   [_.at](/at) 更方便的获取数组或对象的值
 *   [_.attempt](/attempt) 无需 try-catch 来处理可能会出错的执行函数
 *   [_.before](/before) 与 [_.after](/after) 
-*   [_.bindKey](/bindKey) 用于实现 [_“懒传参”_](http://michaux.ca/articles/lazy-function-definition-pattern) 
+*   [_.bindKey](/bindKey) 实现 [_“懒传参”_](http://michaux.ca/articles/lazy-function-definition-pattern)
 *   [_.chunk](/chunk) 按给定个数来拆分数组
 *   [_.clone](/clone) 支持对 `Date` & `RegExp` 对象的浅拷贝
 *   [_.cloneDeep](/cloneDeep) 深拷贝数组或对象
