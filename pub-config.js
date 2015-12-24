@@ -1,6 +1,6 @@
 var opts = module.exports = {
 
-    appUrl : 'http://think2011.net/lodash-zh',
+    appUrl : 'http://lodash.think2011.net',
     github : 'https://github.com/think2011/lodash-zh',
     version: '4.0.0-pre',
 

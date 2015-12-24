@@ -33,13 +33,13 @@ _.map([1, 2, 3], function(n) { return n * 3; });
 *   [_.cloneDeep](/cloneDeep) 深拷贝数组或对象
 *   [_.curry](/curry) & [_.curryRight](/curryRight) 用于创建 [柯里化](http://hughfdjackson.com/javascript/why-curry-helps/) 函数
 *   [_.debounce](/debounce) & [_.throttle](/throttle) are cancelable & accept options for more control
-*   [_.defaultsDeep](/defaultsDeep) for recursively assigning default properties
+*   [_.defaultsDeep](/defaultsDeep) for recursively assigning default Properties
 *   [_.fill](/fill) to fill arrays with values
 *   [_.findKey](/findKey) for finding keys
 *   [_.flow](/flow) to complement [_.flowRight](/flowRight) (a.k.a `_.compose`)
 *   [_.forEach](/forEach) supports exiting early
-*   [_.forIn](/forIn) for iterating all enumerable properties
-*   [_.forOwn](/forOwn) for iterating own properties
+*   [_.forIn](/forIn) for iterating all enumerable Properties
+*   [_.forOwn](/forOwn) for iterating own Properties
 *   [_.get](/get) & [_.set](/set) for deep property getting & setting
 *   [_.gt](/gt), [_.gte](/gte), [_.lt](/lt), & [_.lte](/lte) relational methods
 *   [_.inRange](/inRange) for checking whether a number is within a given range
@@ -58,12 +58,12 @@ _.map([1, 2, 3], function(n) { return n * 3; });
 *   [_.restParam](/restParam) & [_.spread](/spread) for applying rest parameters & spreading arguments to functions
 *   [_.runInContext](/runInContext) for collisionless mixins & easier mocking
 *   [_.slice](/slice) for creating subsets of array-like values
-*   [_.sortByAll](/sortByAll) & [_.sortByOrder](/sortByOrder) for sorting by multiple properties & orders
+*   [_.sortByAll](/sortByAll) & [_.sortByOrder](/sortByOrder) for sorting by multiple Properties & orders
 *   [_.support](/support) for flagging environment features
 *   [_.template](/template) supports [_“imports”_](/templateSettings-imports) options & [ES template delimiters](http://people.mozilla.org/%7Ejorendorff/es6-draft.html#sec-template-literal-lexical-components)
 *   [_.transform](/transform) as a powerful alternative to [_.reduce](/reduce) for transforming objects
 *   [_.unzipWith](/unzipWith) & [_.zipWith](/zipWith) to specify how grouped values should be combined
-*   [_.valuesIn](/valuesIn) for getting values of all enumerable properties
+*   [_.valuesIn](/valuesIn) for getting values of all enumerable Properties
 *   [_.xor](/xor) to complement [_.difference](/difference), [_.intersection](/intersection), & [_.union](/union)
 *   [_.add](/add), [_.round](/round), [_.sum](/sum), & [more](/docs "_.ceil & _.floor") math methods
 *   [_.bind](/bind), [_.curry](/curry), [_.partial](/partial), & [more](/docs "_.bindKey, _.curryRight, _.partialRight") support customizable argument placeholders
