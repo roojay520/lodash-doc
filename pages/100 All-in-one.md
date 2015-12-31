@@ -1,4 +1,4 @@
 ---- /all ----
-name: 3.单页方式浏览
+name: All-in-one Doc
 template: all
 multipage: 1
