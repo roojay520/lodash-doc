@@ -45,19 +45,17 @@ var chunk = require('lodash/array/chunk');
 **注意:**
 在 REPL 中不要声明 [特殊变量](http://nodejs.org/api/repl.html#repl_repl_features) "`_`"，安装 [n_](https://www.npmjs.com/package/n_) 来代替。
 
-## Module formats
+## 模块格式
 
-lodash is also available in a variety of other builds & module formats.
+lodash 还有多种构建模块的格式
 
-*   npm packages for [modern](https://www.npmjs.com/package/lodash), [compatibility](https://www.npmjs.com/package/lodash-compat), & [per method](https://www.npmjs.com/browse/keyword/lodash-modularized) builds
-*   AMD modules for [modern](https://github.com/lodash/lodash/tree/3.10.1-amd) & [compatibility](https://github.com/lodash/lodash-compat/tree/3.10.1-amd) builds
-*   ES modules for the [modern](https://github.com/lodash/lodash/tree/3.10.1-es) build
+*   npm 构建格式: [现代](https://www.npmjs.com/package/lodash), [兼容](https://www.npmjs.com/package/lodash-compat), & [单个方法](https://www.npmjs.com/browse/keyword/lodash-modularized) 
+*   AMD 构建格式: [现代](https://github.com/lodash/lodash/tree/3.10.1-amd) & [兼容](https://github.com/lodash/lodash-compat/tree/3.10.1-amd)
+*   ES 构建格式: [现代](https://github.com/lodash/lodash/tree/3.10.1-es)
 
-CDN copies are available on [cdnjs](https://cdnjs.com/) & [jsDelivr](http://www.jsdelivr.com/).
-Create [custom builds](/custom-builds) with only the features you need.
-Looking for more functional usage? Try [lodash-fp](https://www.npmjs.com/package/lodash-fp).
+CDN 服务在 [cdnjs](https://cdnjs.com/) & [jsDelivr](http://www.jsdelivr.com/)，通过 [自定义构建](/custom-builds) 构建你需要的模块，在找更多的功能用法? 试试 [lodash-fp](https://www.npmjs.com/package/lodash-fp)
 
-## 深入理解
+## 深入了解
 
 查看我们的 [更新日志](https://github.com/lodash/lodash/wiki/Changelog), [路线图](https://github.com/lodash/lodash/wiki/Roadmap), 以及 [社区里的播客、文章、视频](https://github.com/lodash/lodash/wiki/Resources).
 
