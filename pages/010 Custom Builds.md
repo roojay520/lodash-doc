@@ -2,9 +2,9 @@
 
 通过版本定制可以很轻松的定制仅包含你所需功能的 lodash 版本 。更棒的是，我们已经帮你处理好了函数依赖和别名对应，查看 [版本区别](https://github.com/lodash/lodash/wiki/build-differences) & 选择一个适合你的版本。
 
-Using Grunt? We also provide a [Grunt plugin](https://npmjs.org/package/grunt-lodash) to build lodash as part of your Gruntfile.
+使用 Grunt? 我们准备了 [Grunt plugin](https://npmjs.org/package/grunt-lodash) 协助构建 lodash。
 
-The `lodash` command-line utility is available when [lodash-cli](https://npmjs.org/package/lodash-cli) is installed as a global package:
+安装 [lodash-cli](https://npmjs.org/package/lodash-cli) 来作为 `lodash` 全局命令行工具:
 
 ```
 $ {sudo -H} npm i -g npm
@@ -12,33 +12,33 @@ $ {sudo -H} npm i -g lodash-cli
 $ lodash -h
 ```
 
-**Note:** Uninstall older versions _before_ installing `lodash-cli`.
+**注意:** 请先卸载旧版本，再安装 `lodash-cli`。
 
-*   Compat builds, with support for old & new environments, are created using the `compat` modifier. _(default)_
+*   兼容版本构建，同时支持新旧运行环境，使用 `compat` 修饰。 _(默认)_
 
 ```
 lodash compat
 ```
 
-*   Modern builds, tailored for newer environments with [ES5](https://es5.github.io/)/[ES6](ttps://people.mozilla.org/~jorendorff/es6-draft.html) support, are created using the `modern` modifier.
+*   现代版本构建，针对新的环境，包括 [ES5](https://es5.github.io/)/[ES6](ttps://people.mozilla.org/~jorendorff/es6-draft.html) 支持，使用 `modern` 修饰。
 
 ```
 lodash modern
 ```
 
-*   Strict builds, with [ES strict mode](https://es5.github.io/#C) enabled, are created using the `strict` modifier.
+*   严格模式版本构建, 开启 [ES 严格模式](https://es5.github.io/#C)，使用 `strict` 修饰。
 
 ```
 lodash strict
 ```
 
-*   Modularized builds, splitting lodash into modules, are created using the `modularize` modifier.
+*   模块化版本构建，拆散 lodash 为各个模块，使用 `modularize` 修饰。
 
 ```
 lodash modularize
 ```
 
-Build commands:
+构建命令:
 
 *   Use the `category` command to pass comma separated categories of functions to include in the build. Valid categories are _“array”_, _“chain”_, _“collection”_, _“date”_, _“function”_, _“lang”_, _“object”_, _“number”_, _“string”_, & _“utility”_.
 

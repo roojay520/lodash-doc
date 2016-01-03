@@ -11,7 +11,7 @@ var CB = $('li > a:contains("Custom Builds")');
 var AD = $('li > a:contains("All-in-one Doc")');
 
 GS.text('入门指南');
-CB.text('定制版本');
+CB.text('版本定制');
 AD.text('单页面方式浏览');
 
 // global list of pages extracted from TOC by initSearchNav()
