@@ -53,7 +53,7 @@ lodash 还有多种构建模块的格式
 *   AMD 构建格式: [现代](https://github.com/lodash/lodash/tree/3.10.1-amd) & [兼容](https://github.com/lodash/lodash-compat/tree/3.10.1-amd)
 *   ES 构建格式: [现代](https://github.com/lodash/lodash/tree/3.10.1-es)
 
-CDN 服务在 [cdnjs](https://cdnjs.com/) & [jsDelivr](http://www.jsdelivr.com/)，通过 [自定义构建](/custom-builds) 构建你需要的模块，在找更多的功能用法? 试试 [lodash-fp](https://www.npmjs.com/package/lodash-fp)
+CDN 服务在 [cdnjs](https://cdnjs.com/) & [jsDelivr](http://www.jsdelivr.com/)，通过 [版本定制](/custom-builds) 构建你需要的模块，在找更多的功能用法? 试试 [lodash-fp](https://www.npmjs.com/package/lodash-fp)
 
 ## 深入了解
 
@@ -63,4 +63,4 @@ CDN 服务在 [cdnjs](https://cdnjs.com/) & [jsDelivr](http://www.jsdelivr.com/)
 
 在 Chrome 43-44, Firefox 38-39, IE 6-11, MS Edge, Safari 5-8, ChakraNode 0.12.2, Node.js 0.8.28, 0.10.40, 0.12.7, & 4.0.0, PhantomJS 1.9.8, RingoJS 0.11, & Rhino 1.7.6 测试通过
 
-[浏览器自动化测试](https://saucelabs.com/u/lodash) & [CI](https://travis-ci.org/lodash/) 持续集成已在运作， 特别感谢 [Sauce Labs](https://saucelabs.com/) 提供的浏览器自动化测试。
+[自动化测试](https://saucelabs.com/u/lodash) & [持续集成](https://travis-ci.org/lodash/) 已在运作， 特别感谢 [Sauce Labs](https://saucelabs.com/) 提供的浏览器自动化测试。
