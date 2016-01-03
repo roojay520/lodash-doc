@@ -17,6 +17,7 @@
     "develop": "pub",
     "generate": "pub -O -E",
     "static": "pub -S out",
+    "push":"git commit -am \"Update\" && git push",
     "publish": "npm run generate && cd lodash-zh && git add . && git commit -m \"publish\" && git push"
   },
   "author": "jurgen leschner",
