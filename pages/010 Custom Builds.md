@@ -76,7 +76,7 @@ lodash modern minus=result,shuffle
 lodash category=array plus=random,template
 ```
 
-*   Use the `template` command to pass the file path pattern used to match template files to precompile. **Note:** Precompiled templates are assigned to the `_.<span class="me1">templates</span>` object.
+*   Use the `template` command to pass the file path pattern used to match template files to precompile. **注意:** 预编译模板分配在 `_.templates` 对象上。
 
 ```
 lodash template="./*.jst"
