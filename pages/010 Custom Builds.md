@@ -76,7 +76,7 @@ lodash modern minus=result,shuffle
 lodash category=array plus=random,template
 ```
 
-*   Use the `template` command to pass the file path pattern used to match template files to precompile. **注意:** 预编译模板分配在 `_.templates` 对象上。
+*   使用 `template` 命令传入路径相匹配的文件生成预编译模板。 **注意:** 预编译模板分配在 `_.templates` 对象上。
 
 ```
 lodash template="./*.jst"
@@ -88,7 +88,7 @@ lodash template="./*.jst"
 lodash settings="{interpolate:/\{\{([\s\S]+?)\}\}/g}"
 ```
 
-*   Use the `moduleId` command to specify the AMD module ID for lodash or the module ID used to include lodash in compiled templates. Use “none” as the module ID to create compiled templates without a dependency on lodash.
+*   使用 `moduleId` 命令指定 lodash 的 AMD module ID 或 包含 lodash 的编译模板的 module ID。指定为 `none` 表示创建编译模板不依赖 lodash。
 
 ```
 lodash moduleId=underscore
