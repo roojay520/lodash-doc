@@ -18,12 +18,12 @@ var opts = module.exports = {
 
     sources: [
         {path: './pages', writable: true},
-        {path: './lodash/lodash.js', format: 'JsDOC'},
+        {path: './lodash/lodash-zh.js', format: 'JsDOC'},
         {path: './templates', compile: 'handlebars'}
     ],
 
     staticPaths: [
-        {path: './lodash/lodash.js', route: '/js', inject: true},
+        {path: './lodash/lodash-zh.js', route: '/js', inject: true},
         './static',
         './CNAME',
         '.gitignore',

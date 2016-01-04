@@ -4,20 +4,20 @@
 {{{html}}}
 
 {{#if params~}}
-<h3>Arguments</h3>
-<ol>
-{{#each params~}}
-<li><span class="param-name">{{name}}</span> <span class="param-type">({{type}})</span> {{{html desc}}}</li>
-{{/each}}
-</ol>
+    <h3>参数</h3>
+    <ol>
+        {{#each params~}}
+            <li><span class="param-name">{{name}}</span> <span class="param-type">({{type}})</span> {{{html desc}}}</li>
+        {{/each}}
+    </ol>
 {{/if~}}
 
 {{#with returns~}}
-<h3>Returns <span class="return-type">({{type}})</span></h3>
-<div class="returns"> {{{html desc}}}</div>
+    <h3>返回值 <span class="return-type">({{type}})</span></h3>
+    <div class="returns"> {{{html desc}}}</div>
 {{/with~}}
 
 {{#if example~}}
-<h3>Example</h3>
-{{{html example}}}
+    <h3>示例</h3>
+    {{{html example}}}
 {{/if~}}
