@@ -18,8 +18,10 @@
     "debug": "pub -D",
     "generate": "pub -O -E",
     "static": "pub -S out",
-    "push": "git add . && git commit -am \"publish\" && git push",
-    "publish": "npm run generate && cd lodash && nrm run push && cd ../lodash-zh && nrm run push"
+    "push-dev": "git add . && git commit -am \"publish\" && git push",
+    "push-lodash": "cd lodash && git add . && git commit -am \"publish\" && git push",
+    "push-static": "cd lodash-zh && git add . && git commit -am \"publish\" && git push",
+    "publish": "npm run generate && npm run push"
   },
   "author": "jurgen leschner",
   "license": "MIT"
