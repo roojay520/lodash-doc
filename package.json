@@ -20,7 +20,7 @@
     "static": "pub -S out",
     "push-dev": "git add . && git commit -am \"publish\" && git push",
     "push-lodash": "cd lodash && git add . && git commit -am \"publish\" && git push",
-    "push-static": "cd lodash-zh && git add . && git commit -am \"publish\" && git push"
+    "push-static": "cd lodash-zh && git add . && git commit -am \"publish\" && git push -f"
   },
   "author": "jurgen leschner",
   "license": "MIT"
