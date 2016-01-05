@@ -15,6 +15,7 @@
   },
   "scripts": {
     "develop": "pub",
+    "debug": "pub -D",
     "generate": "pub -O -E",
     "static": "pub -S out",
     "push": "git commit -am \"Update\" && git push",
