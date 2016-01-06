@@ -14,7 +14,7 @@
     "url": "git://github.com/jldec/lodash-doc-src.git"
   },
   "scripts": {
-    "develop": "pub",
+    "develop": "open http://127.0.0.1:3001 && pub",
     "debug": "pub -D",
     "generate": "pub -O -E",
     "static": "pub -S out",
