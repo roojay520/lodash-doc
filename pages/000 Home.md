@@ -76,5 +76,5 @@ _.map([1, 2, 3], function(n) { return n * 3; });
 *   [_#thru](/thru) 传递链式队列的值
 
 ## 关于翻译
-* 该文档由 [think2011](https://github.com/think2011/) 翻译，遵循 [MIT协议](https://github.com/jldec/lodash-doc-src/blob/master/LICENSE)， 保持与官方同步，翻译质量可能没法特别好，但会保证尽可能反复细心。
+* 该文档由 [think2011](https://github.com/think2011/) 翻译，遵循 [MIT协议](https://github.com/jldec/lodash-doc-src/blob/master/LICENSE)， 定时保持与官方同步，翻译质量可能没法特别好，但会保证尽可能反复细心。
 * 如果您有任何建议，或者意见，[欢迎在此讨论，及时更正 ;-)](https://github.com/think2011/lodash-zh/issues)。
