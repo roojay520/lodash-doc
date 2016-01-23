@@ -56,7 +56,7 @@ _.map([1, 2, 3], function(n) { return n * 3; });
 *   [_.pull](/pull), [_.pullAt](/pullAt), & [_.remove](/remove) 方便调整数组
 *   [_.random](/random) 支持返回浮点数
 *   [_.restParam](/restParam) & [_.spread](/spread) 应用一个 rest arguments 和 Spread operator 参数传递给函数
-*   [_.runInContext](/runInContext) 无碰撞的 mixins 且更方便模拟
+*   [_.runInContext](/runInContext) 无影响的 mixins 且更方便模拟
 *   [_.slice](/slice) 支持裁剪类数组
 *   [_.sortByAll](/sortByAll) & [_.sortByOrder](/sortByOrder) 多个属性排序
 *   [_.support](/support) 标记环境功能
