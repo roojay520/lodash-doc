@@ -2,7 +2,7 @@ var opts = module.exports = {
 
     appUrl : 'http://lodash.think2011.net',
     github : 'https://github.com/think2011/lodash-zh',
-    version: '4.0.0正式版',
+    version: '4.1.0正式版',
 
     noRobots      : false,            // please don't crawl me (yet)
     linkNewWindow : true,
