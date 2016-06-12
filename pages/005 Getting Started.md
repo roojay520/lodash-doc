@@ -2,10 +2,8 @@
 
 查看 [版本区别](https://github.com/lodash/lodash/wiki/build-differences) 来选择适合你的版本
 
-*   [现代版本](https://raw.github.com/lodash/lodash/3.10.1/lodash.js) ([压缩版](https://raw.github.com/lodash/lodash/3.10.1/lodash.min.js))
-    适合现代浏览器（运行环境），例如：Chrome, Firefox, IE ≥ 9, & Safari ≥ 5.1
-*   [兼容版本](https://raw.github.com/lodash/lodash-compat/3.10.1/lodash.js) ([压缩版](https://raw.github.com/lodash/lodash-compat/3.10.1/lodash.min.js))
-    同时兼容旧的浏览器（运行环境），例如：IE ≤ 8 & PhantomJS
+*   【现代版本】适合现代浏览器（运行环境），例如：Chrome, Firefox, IE ≥ 9, & Safari ≥ 5.1
+*   【兼容版本】同时兼容旧的浏览器（运行环境），例如：IE ≤ 8 & PhantomJS
 
 ## 引入
 
