@@ -2,7 +2,7 @@
 
 查看 [版本区别](https://github.com/lodash/lodash/wiki/build-differences) 来选择适合你的版本
 
-*   [核心简版](https://raw.githubusercontent.com/lodash/lodash/4.5.0/dist/lodash.core.js)(gzip压缩后 ~4kB)，适合现代浏览器（运行环境），例如：Chrome, Firefox, IE ≥ 9, & Safari ≥ 5.1
+*   [核心版](https://raw.githubusercontent.com/lodash/lodash/4.5.0/dist/lodash.core.js)(gzip压缩后 ~4kB)，适合现代浏览器（运行环境），例如：Chrome, Firefox, IE ≥ 9, & Safari ≥ 5.1
 *   [完整版](https://raw.githubusercontent.com/lodash/lodash/4.5.0/dist/lodash.js)(gzip压缩后 ~22kB)，同时兼容旧的浏览器（运行环境），例如：IE ≤ 8 & PhantomJS
 
 ## 引入
