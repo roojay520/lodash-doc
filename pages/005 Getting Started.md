@@ -38,7 +38,7 @@ var array = require('lodash/array');
 var chunk = require('lodash/array/chunk');
 ```
 
-查看 [源码包](https://github.com/lodash/lodash/tree/3.0.0-npm) 了解更多详情
+查看 [源码包](https://github.com/lodash/lodash/tree/4.5.0-npm) 了解更多详情
 
 **注意:**
 在 REPL 中不要声明 [特殊变量](http://nodejs.org/api/repl.html#repl_repl_features) "`_`"，安装 [n_](https://www.npmjs.com/package/n_) 来代替。
@@ -47,9 +47,9 @@ var chunk = require('lodash/array/chunk');
 
 lodash 还有多种构建模块的格式
 
-*   npm 构建格式: [现代](https://www.npmjs.com/package/lodash), [兼容](https://www.npmjs.com/package/lodash-compat), & [单个方法](https://www.npmjs.com/browse/keyword/lodash-modularized) 
-*   AMD 构建格式: [现代](https://github.com/lodash/lodash/tree/3.10.1-amd) & [兼容](https://github.com/lodash/lodash-compat/tree/3.10.1-amd)
-*   ES 构建格式: [现代](https://github.com/lodash/lodash/tree/3.10.1-es)
+*   npm 构建格式: [现代](https://www.npmjs.com/package/lodash), [兼容](https://www.npmjs.com/package/lodash-compat), & [单个方法](https://www.npmjs.com/browse/keyword/lodash-modularized)
+*   AMD 构建格式: [现代](https://github.com/lodash/lodash/tree/4.5.0-amd) & [兼容](https://github.com/lodash/lodash-compat/tree/4.5.0-amd)
+*   ES 构建格式: [现代](https://github.com/lodash/lodash/tree/4.5.0-es)
 
 CDN 服务在 [cdnjs](https://cdnjs.com/) & [jsDelivr](http://www.jsdelivr.com/)，通过 [版本定制](/custom-builds) 构建你需要的模块，在找更多的功能用法? 试试 [lodash-fp](https://www.npmjs.com/package/lodash-fp)
 

@@ -5,7 +5,7 @@
   "main": "pub-config.js",
   "dependencies": {
     "docdown": "^0.3.0",
-    "lodash": "^3.10.1",
+    "lodash": "^4.5.0",
     "page": "^1.6.4",
     "pub-server": "^1.9.16"
   },
