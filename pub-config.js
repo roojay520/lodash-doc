@@ -25,7 +25,6 @@ var opts = module.exports = {
     staticPaths: [
         {path: './lodash-src/lodash-zh.js', route: '/js', inject: true},
         './static',
-        './CNAME',
         '.gitignore',
         '.nojekyll',
         './README.md'
