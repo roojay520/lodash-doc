@@ -38,7 +38,7 @@ var opts = module.exports = {
     injectCss: ['/css/doc.css'],
 
     outputs: {
-        path    : './lodash-zh',
+        path    : './dist',
         relPaths: true
     }
 

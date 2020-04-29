@@ -16,11 +16,7 @@
   "scripts": {
     "develop": "open http://127.0.0.1:3001 && pub",
     "debug": "pub -D",
-    "generate": "pub -O -E",
-    "static": "pub -S out",
-    "push-dev": "git add . && git commit -am \"publish\" && git push",
-    "push-lodash": "cd lodash && git add . && git commit -am \"publish\" && git push",
-    "push-static": "cd lodash-zh && git add . && git commit -am \"publish\" && git push -f"
+    "generate": "pub -O -E"
   },
   "author": "jurgen leschner",
   "license": "MIT"
