@@ -1,0 +1,32 @@
+name: Publish Docs
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install dependencies & Build web
+        run: |
+          yarn install
+          yarn run build
+
+      - name: Deploy Github
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.LODASH_DOC }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "Deployed from bot > ${{ github.event.head_commit.message }}"

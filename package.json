@@ -14,9 +14,9 @@
     "url": "git://github.com/jldec/lodash-doc-src.git"
   },
   "scripts": {
-    "develop": "open http://127.0.0.1:3001 && pub",
+    "serve": "open http://127.0.0.1:3001 && pub",
     "debug": "pub -D",
-    "generate": "pub -O -E"
+    "build": "pub -O -E"
   },
   "author": "jurgen leschner",
   "license": "MIT"
